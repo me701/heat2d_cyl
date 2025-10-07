@@ -144,7 +144,7 @@ def construct_system(r_points, z_points, k_fun, qppp,
                     b[p]    += DE_star * gamma
 
                 else:
-                    raise ValueError(f"Unknown BC kind for outer radius: {BC_r_top}")
+                    raise ValueError(f"Unknown BC kind for outer radius: {BC_z}")
 
             # ---- TOP axial boundary at j = Nz-1: (E4D/E4N/E4R) ----
             if j == Nz-1:
@@ -176,7 +176,7 @@ def construct_system(r_points, z_points, k_fun, qppp,
                     b[p]    += DN_star * gamma
 
                 else:
-                    raise ValueError(f"Unknown BC kind for top z boundary: {BC_z}")
+                    raise ValueError(f"Unknown BC kind for top z boundary: {BC_r_top}")
 
             # ---- BOTTOM axial boundary at j = 0: (E5D/E5N/E5R) ----
             if j == 0:
